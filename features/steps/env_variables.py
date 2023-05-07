@@ -1,0 +1,7 @@
+NOVA_BASE_URL = "https://nova-test.nebula.io"
+REMOTE_URL = "http://localhost:4444"
+NOVA_USERNAME = "testing@nebula.io"
+NOVA_PASSWORD = "TryItOut!123"
+TALENT_FULL_PROFILE_INPUT_QUERY = "Starting is as easy as putting in a relevant portion of a job description or even a list of skills"
+EMAIL_SUBJECT = "Sending email to talent"
+EMAIL_MESSAGE = "I hope this email finds you well. Regards!"

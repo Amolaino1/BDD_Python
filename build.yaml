@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    used-for: Jenkins
+spec:
+  containers:
+    - name: python
+      image: python
+      command:
+        - cat
+      tty: true
+      privileged: true
+      volumeMounts:
+        - name: dockersock
+          mountPath: /var/run/docker.sock
+  volumes:
+    - name: dockersock
+      hostPath:
+        path: /var/run/docker.sock
+  tolerations:
+    - key: "used-for"
+      operator: "Equal"
+      value: "build"
+      effect: "NoSchedule"
